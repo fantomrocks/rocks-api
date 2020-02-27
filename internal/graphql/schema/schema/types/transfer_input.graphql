@@ -1,0 +1,6 @@
+# Defines input type for Account to Account transfer inside an Account Pair
+input TransferInput {
+    fromAccountId: ID!
+    toAccountId: ID!
+    amount: Amount!
+}

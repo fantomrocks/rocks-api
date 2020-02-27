@@ -1,0 +1,5 @@
+# Defines pairs of Accounts to be used together
+type AccountPair {
+    one: Account
+    two: Account
+}

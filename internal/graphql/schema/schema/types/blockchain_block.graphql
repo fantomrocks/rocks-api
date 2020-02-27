@@ -1,0 +1,17 @@
+# Raw BlockChain Block details
+type BlockchainBlock {
+    "Unique identifier of the Block."
+    hash: ID!
+
+    "Number of the Block in the chain."
+    number: Number!
+
+    "Timestamp of the Block creation."
+    timeStamp: Time!
+
+    "List of hashes of transaction inside the Block."
+    txHashes: [String!]!
+
+    "List of transactions inside the Block."
+    transactions: [BlockchainTransaction!]!
+}

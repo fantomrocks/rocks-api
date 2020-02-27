@@ -1,0 +1,25 @@
+# Fantom Rocks API server options
+server:
+  #  name: FantomRocksApi
+  listen: ":8000"
+  cors:
+    - *
+
+# go-logging (github.com/op/go-logging) options
+# Allowed levels: CRITICAL, ERROR, WARNING, NOTICE, INFO, DEBUG
+logger:
+#  level: INFO
+#  format: "%{color}%{time:2019-01-01 15:04:05} [%{level:.6s}] %{shortfunc}:%{color:reset} %{message}"
+
+# database configuration
+db:
+    driver: postgres
+    host: localhost
+    port: 5432
+    name: fantom
+    user: default-user
+    password: default-password
+
+# block-chain node connection params
+rpc:
+#  url:

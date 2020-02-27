@@ -1,0 +1,7 @@
+# Fantom Account type specification
+type Account {
+    id: ID!
+    name: String!
+    address: String!
+    balance: Amount!
+}

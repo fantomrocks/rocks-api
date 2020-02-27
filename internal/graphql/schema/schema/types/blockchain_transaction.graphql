@@ -1,0 +1,38 @@
+# Raw BlockChain Transaction details
+type BlockchainTransaction {
+    "Transaction hash identifier."
+    hash: ID!
+
+    "Sender address."
+    from: String!
+
+    "Recipient address; <null> for contract creation transaction."
+    to: String
+
+    "Value transfered in WEI."
+    value: Amount!
+
+    "The data send along with the transaction."
+    input: String!
+
+    "The number of transactions made by the sender prior to this one."
+    nonce: Int!
+
+    "Index of the transaction inside block; <null> for pending."
+    txIndex: Int
+
+    "Maximal amount of gas offered by sender for the Transaction."
+    gasLimit: Amount!
+
+    "Amount of gas used by Transaction."
+    gasUsed: Amount!
+
+    "Price of the gas used by the Transaction."
+    gasPrice: Amount!
+
+    "Transaction fee; related to used gas and gas price."
+    fee: Amount!
+
+    "Block the Transaction was in; <null> for pending."
+    block: BlockchainBlock
+}

@@ -1,0 +1,32 @@
+# Root schema definition
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+# Entry points for querying the API
+type Query {
+    "Get an Account either specified by ID, or a random one if ID is not provided."
+    account(id:ID):Account!
+
+    "Get list of Accounts specified by their ID."
+    accounts(list:[ID!]):[Account!]!
+
+    "Get single pair of accounts, either random ar specified by the ID."
+    pair: AccountPair!
+
+    "Get account pairs to be used together."
+    pairs: [AccountPair!]!
+
+    "Get raw transaction information for given transaction ID."
+    blockchainTransaction(hash:ID!):BlockchainTransaction
+}
+
+# data mutation entry points
+type Mutation {
+    "Transfer funds from one Account to another Account of the same Account Pair."
+    transfer(toTransfer: TransferInput!): Transaction
+
+    "Create a burst of transactions from a single Account to random selection of target accounts."
+    burst(fromAccountId: ID!, amount: Amount!, targetsCount: Int!): [Transaction!]!
+}

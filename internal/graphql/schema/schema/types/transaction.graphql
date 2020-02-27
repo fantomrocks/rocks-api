@@ -1,0 +1,8 @@
+# Transaction inside the chain as a result of Transfer
+type Transaction {
+    id: ID!
+    from: Account!
+    to: Account!
+    amount: Amount!
+    timeStamp: Time!
+}

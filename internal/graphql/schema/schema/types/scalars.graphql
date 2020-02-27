@@ -1,0 +1,8 @@
+# Holds amount of monetary value
+scalar Amount
+
+# Holds integere type number for Blockchain indexes
+scalar Number
+
+# Holds timestamp
+scalar Time
